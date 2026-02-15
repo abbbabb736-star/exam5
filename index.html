@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnAir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="logoport.svg" />
+
+    <link rel="stylesheet" href="./dist/css/index.min.css" />
+  
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="container">
+          <div class="nav__wrapper">
+            <div class="nav__list">
+              <div class="nav__logo">
+                <img src="assets/icons/logo.svg" alt="OnAir" />
+              </div>
+              <ul class="nav__desktop-links">
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Channels</a></li>
+                <li><a href="#">Music</a></li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              class="nav__burger"
+              id="nav-burger"
+              aria-label="Menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+            <div class="nav__actions">
+              <ul class="nav__search">
+                <li>
+                  <a href=""
+                    ><img src="assets/icons/search.svg" alt="" />search</a
+                  >
+                </li>
+              </ul>
+              <ul class="nav__login">
+                <li>
+                  <a href="/login"
+                    ><img src="assets/icons/user.svg" alt="" /> Sign in</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="nav__menu-overlay" id="nav-menu">
+        <div class="nav__menu-header">
+          <div class="nav__logo">
+            <img src="assets/icons/logo.svg" alt="OnAir" />
+          </div>
+          <button
+            type="button"
+            class="nav__menu-close"
+            id="nav-menu-close"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <input type="text" class="nav__menu-search" placeholder="Search" />
+        <ul class="nav__menu-links">
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Channels</a></li>
+          <li><a href="#">Series</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Games</a></li>
+        </ul>
+        <a href="/login" class="nav__menu-signin"
+          ><img src="assets/icons/user.svg" alt="" /> Sign in</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="hero__titles">
+              <h1>
+                Dive into a <span>universe</span> of <br />
+                un-ending content and <br />
+                channels
+              </h1>
+
+              <div class="hero__button">
+                <a
+                  href="https://www.imdb.com/title/tt35149233/"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Start FREE trial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cads">
+        <div class="container">
+          <div id="cards-container" class="cads__grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__logo-titles">
+              <div class="footer__logo">
+                <img src="assets/icons/logowhite.svg" alt="" />
+              </div>
+
+              <p>
+                Hot Africa, we offer original, exclusive <br />
+                and premium stories. Everything you <br />
+                want to watch, anytime, anywhere and <br />
+                as much.
+              </p>
+
+              <div class="footer__socials">
+                <div class="footer__socials-appstore">
+                  <img src="assets/icons/appstore.svg" alt="" />
+                </div>
+                <div class="footer__socials-googlepay">
+                  <img src="assets/icons/googleplay.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="footer__follow">
+                <div class="footer__follow-img">
+                  <img src="assets/icons/facebook (2).svg" alt="" />
+                </div>
+                <div class="footer__follow-img">
+                  <img src="assets/icons/instagramm.svg" alt="" />
+                </div>
+                <div class="footer__follow-img">
+                  <img src="assets/icons/twitter (2).svg" alt="" />
+                </div>
+                <div class="footer__follow-img">
+                  <img src="assets/icons/youtube (1).svg" alt="" />
+                </div>
+              </div>
+
+              <div class="footer__legal">
+                <div class="footer__legal-wrapper">
+                  <div class="footer__legal-title">
+                    <p>Terms of use</p>
+                  </div>
+                  <div class="footer__legal-title">
+                    <p>Privacy Policy</p>
+                  </div>
+                  <div class="footer__legal-title">
+                    <p>SiteMap</p>
+                  </div>
+                </div>
+
+                <p>Copyright © 2022 Hot Africa. All rights reserved.</p>
+              </div>
+            </div>
+
+            <div class="footer__login">
+              <div class="footer__login-img">
+                <img src="assets/icons/user.svg" alt="" />
+                <ul>
+                  <li>
+                    <a href="/login"> Sign in </a>
+                  </li>
+                </ul>
+              </div>
+              <ul>
+                <li>Personal data</li>
+                <li>Choosing a Plan</li>
+                <li>Payment</li>
+              </ul>
+            </div>
+
+            <div class="footer__movies">
+              <ul>
+                <li>Movies</li>
+                <li>Lock Upp</li>
+                <li>Pavitra Rishta</li>
+                <li>Girgit</li>
+                <li>Hai Taubba Season 3</li>
+                <li>Cartel</li>
+                <li>Crimes And Confessions</li>
+                <li>Puncch Beat Season 2</li>
+
+                <li>But Beautiful Season 3</li>
+              </ul>
+            </div>
+            <div class="footer__series">
+              <ul>
+                     <li>Series</li>
+                <li>X.X.X. Season 2</li>
+                <li>Gandii Baat Season 5</li>
+                <li>Gandii Baat Season 6</li>
+                <li>Broken But Beautiful Season 1</li>
+                <li>Broken But Beautiful Season 2</li>
+                <li>Class Of 2020</li>
+                <li>Bekaaboo Season 1</li>
+                <li>Ragini MMS Returns Season 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="index.js"></script>
+   
+  </body>
+</html>

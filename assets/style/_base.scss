@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: Ubuntu;
+
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 20px 70px;
+  margin: 0 auto;
+}
+
+.wall {
+  width: 1350px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+
