@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
   <head>
     <meta charset="UTF-8" />
@@ -14,64 +14,10 @@
     <link rel="icon" href="logoport.svg" />
 
     <link rel="stylesheet" href="./dist/css/index.min.css" />
+
     <style>
-      .cads__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 24px;
-        width: 100%;
-      }
-      .cads__card {
-        display: block;
-        margin-bottom: 0;
-        border-radius: 12px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-decoration: none;
-        color: #fff;
-      }
-      .cads__card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-      }
-      .cads__card img {
-        width: 100%;
-        aspect-ratio: 2/3;
-        object-fit: cover;
-        display: block;
-      }
-      .cads__card-info {
-        padding: 12px;
-      }
-      .cads__card-type {
-        font-size: 12px;
-        color: #dc3f3f;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-      .cads__card-title {
-        font-size: 16px;
-        font-weight: 600;
-        margin: 6px 0 8px;
-        line-height: 1.3;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .cads__card-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 14px;
-        color: #aaa;
-      }
-      .cads__card-rating {
-        color: #f5c518;
-      }
       .movie-detail {
-        min-height: 75vh;
+        min-height: 100vh;
         background-color: #1a1a1a;
         background-size: cover;
         background-position: center;
@@ -80,30 +26,15 @@
         padding: 60px 0;
         position: relative;
       }
-      .movie-detail .container {
-        position: relative;
-        z-index: 1;
-      }
-      .movie-detail__back {
-        display: inline-block;
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        margin-bottom: 24px;
-        opacity: 0.9;
-      }
-      .movie-detail__back:hover {
-        opacity: 1;
-      }
+
       .movie-detail__content {
-        max-width: 640px;
+        width: 640px;
         color: #fff;
       }
       .movie-detail__title {
-        font-size: 48px;
+        font-size: 50px;
         font-weight: 700;
         margin-bottom: 16px;
-        line-height: 1.15;
         color: #fff;
       }
       .movie-detail__meta {
@@ -113,7 +44,6 @@
       }
       .movie-detail__plot {
         font-size: 17px;
-        line-height: 1.6;
         color: rgba(255, 255, 255, 0.9);
         margin-bottom: 28px;
       }
@@ -123,13 +53,12 @@
         color: #fff;
         padding: 14px 36px;
         font-size: 18px;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: opacity 0.2s;
+        font-weight: 500;
+        border-radius: 60px;
+        transition: all 0.3s ease-in-out;
       }
       .movie-detail__btn:hover {
-        opacity: 0.9;
+        transform: translateY(-4px);
       }
       .nav__burger {
         display: none;
@@ -148,71 +77,7 @@
         background: #fff;
         border-radius: 2px;
       }
-      .nav__menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.95);
-        z-index: 100;
-        padding: 20px;
-        overflow: auto;
-      }
-      .nav__menu-overlay.is-open {
-        display: block;
-      }
-      .nav__menu-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
-      .nav__menu-close {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 28px;
-        cursor: pointer;
-        line-height: 1;
-        padding: 4px 8px;
-      }
-      .nav__menu-search {
-        width: 100%;
-        padding: 14px 16px 14px 44px;
-        font-size: 16px;
-        border-radius: 12px;
-        border: 1px solid #333;
-        background: #1a1a1a url('assets/icons/search.svg') 12px center no-repeat;
-        background-size: 20px;
-        color: #fff;
-        margin-bottom: 24px;
-      }
-      .nav__menu-search::placeholder {
-        color: #888;
-      }
-      .nav__menu-links {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 24px 0;
-      }
-      .nav__menu-links li {
-        margin-bottom: 12px;
-      }
-      .nav__menu-links a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-      }
-      .nav__menu-signin {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-      }
+
       @media (max-width: 992px) {
         .container {
           padding-left: 24px;
@@ -228,42 +93,6 @@
           display: flex;
         }
       }
-      @media (max-width: 768px) {
-        .container {
-          padding-left: 16px;
-          padding-right: 16px;
-        }
-        .movie-detail {
-          min-height: 60vh;
-          padding: 40px 0;
-        }
-        .movie-detail__title {
-          font-size: 32px;
-        }
-        .movie-detail__meta {
-          font-size: 16px;
-          margin-bottom: 16px;
-        }
-        .movie-detail__plot {
-          font-size: 15px;
-          margin-bottom: 20px;
-        }
-        .movie-detail__btn {
-          padding: 12px 28px;
-          font-size: 16px;
-        }
-        .footer__wrapper {
-          flex-direction: column;
-          gap: 40px;
-          text-align: center;
-        }
-        .footer__logo-titles {
-          margin-bottom: 0;
-        }
-        .footer__follow {
-          justify-content: center;
-        }
-      }
     </style>
   </head>
 
@@ -274,7 +103,7 @@
           <div class="nav__wrapper">
             <div class="nav__list">
               <div class="nav__logo">
-                <img src="assets/icons/logo.svg" alt="OnAir" />
+                <img src="assets/icons/logo.svg" alt="" />
               </div>
               <ul>
                 <li><a href="#">Movies</a></li>
@@ -283,14 +112,10 @@
                 <li><a href="#">Music</a></li>
               </ul>
             </div>
-            <button
-              type="button"
-              class="nav__burger"
-              id="nav-burger"
-              aria-label="Menu"
-            >
+            <button class="nav__burger" id="nav-burger">
               <span></span><span></span><span></span>
             </button>
+
             <div class="nav__actions">
               <ul class="nav__search">
                 <li>
@@ -315,32 +140,25 @@
           <div class="nav__logo">
             <img src="assets/icons/logo.svg" alt="OnAir" />
           </div>
-          <button
-            type="button"
-            class="nav__menu-close"
-            id="nav-menu-close"
-            aria-label="Close"
-          >
+          <button type="button" class="nav__menu-close" id="nav-menu-close">
             ×
           </button>
         </div>
         <input type="text" class="nav__menu-search" placeholder="Search" />
         <ul class="nav__menu-links">
-          <li><a href="index.html">Movies</a></li>
+          <li><a href="#">Movies</a></li>
           <li><a href="#">Channels</a></li>
           <li><a href="#">Series</a></li>
           <li><a href="#">Music</a></li>
           <li><a href="#">Games</a></li>
         </ul>
-        <a href="/login" class="nav__menu-signin"
-          ><img src="assets/icons/user.svg" alt="" /> Sign in</a
-        >
+        <a href="/login"><img src="assets/icons/user.svg" alt="" /> Sign in</a>
       </div>
     </header>
 
     <main>
       <section id="movie-detail-section" class="movie-detail">
-        <div class="container">
+        <div class="wall">
           <div id="movie-detail-content" class="movie-detail__content"></div>
         </div>
       </section>
@@ -452,24 +270,5 @@
     </footer>
 
     <script src="movie-detail.js"></script>
-    <script>
-      ;(function () {
-        var burger = document.getElementById('nav-burger')
-        var menu = document.getElementById('nav-menu')
-        var closeBtn = document.getElementById('nav-menu-close')
-        if (burger && menu) {
-          burger.addEventListener('click', function () {
-            menu.classList.add('is-open')
-          })
-          if (closeBtn)
-            closeBtn.addEventListener('click', function () {
-              menu.classList.remove('is-open')
-            })
-          menu.addEventListener('click', function (e) {
-            if (e.target === menu) menu.classList.remove('is-open')
-          })
-        }
-      })()
-    </script>
   </body>
 </html>
